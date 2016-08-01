@@ -1,0 +1,3 @@
+#ignore credentials file
+credentials.json
+.idea/

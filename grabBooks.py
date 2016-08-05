@@ -30,7 +30,6 @@ with requests.session() as session:
                       "(KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"}
     free_book_url = 'https://www.packtpub.com/packt/offers/free-learning'
     initial_page = session.get(free_book_url, verify=False, headers=headers)
-    print(initial_page.text)
     login_form = None
     for element in lxml.html.fromstring(initial_page.text).findall('.//form'):
         if 'packt-user-login-form' in element.values():
